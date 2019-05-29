@@ -1,6 +1,5 @@
 function getlog(){
     var TextBox = document.getElementById('historyTextBox');
-    var rtnbx = document.getElementById('returnbox');
     var getext = ''
     var children = [], child = TextBox.firstChild;
     if (!child){
@@ -13,7 +12,6 @@ function getlog(){
     for (child = 0; child < children.length; child++) {
         getext = getext + '\n' + children[child].innerHTML;
     }
-    prompt('读取',getext);
-    rtnbx.setAttribute('value',getext)
+    prompt('读取',getext)
     return getext
 }
