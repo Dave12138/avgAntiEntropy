@@ -14,6 +14,6 @@ function getlog(){
         getext = getext + '\n' + children[child].innerHTML;
     }
     prompt('读取',getext);
-    rtnbx.setAttribute('placeholder',getext)
+    rtnbx.setAttribute('value',getext)
     return getext
 }
