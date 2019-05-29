@@ -1,3 +1,4 @@
+alert('import success');
 function getlog(){
     var TextBox = document.getElementById('historyTextBox');
     var getext = ''
