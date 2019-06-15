@@ -52,10 +52,10 @@ btt.style = 'float:right;padding:10px;z-index:999;position:absoluted;top:0px;lef
 btt.appendChild(ts);
 var ibb=document.getElementsByClassName('remark')[0]
 ibb.insertBefore(btt,ibb.firstChild);
-var x = document.createElement("INPUT");
+var x = document.createElement("textarea");
 x.setAttribute("type", "text");
 x.id = 'oba';
-var y = document.createElement("INPUT");
+var y = document.createElement("textarea");
 y.setAttribute("type", "text");
 y.id = 'obb';
 var dd = 'width:100%;height:50px;position:absoluted;top:-250px;'
