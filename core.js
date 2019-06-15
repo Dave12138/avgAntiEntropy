@@ -39,9 +39,10 @@ var ts = document.createElement('img')
 var bt = document.createElement('button')
 var btt = document.createElement('button')
 ts.src = 'https://img.moegirl.org/common/f/fc/%E5%B4%A9%E5%9D%8F3%E6%AC%A1%E5%85%83Q.png'
+var tx = ts
 bt.setAttribute('onclick','getlog()');
 bt.style = 'float:right;padding:10px;z-index:999;position:absoluted;top:0px;left:-80px;display:block;';
-bt.appendChild(ts);
+bt.appendChild(tx);
 var iaa=document.getElementsByClassName('history')[0]
 iaa.insertBefore(bt,iaa.firstChild);
 
