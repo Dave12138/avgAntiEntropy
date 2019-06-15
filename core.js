@@ -34,27 +34,28 @@ function getref(){
     y.value = getext
     return getext
 }
-var x = document.createElement("INPUT");
-x.setAttribute("type", "text");
-x.id = 'oba';
-var y = document.createElement("INPUT");
-y.setAttribute("type", "text");
-y.id = 'obb';
+
 var ts = document.createElement('img')
 var bt = document.createElement('button')
 var btt = document.createElement('button')
 ts.src = 'https://img.moegirl.org/common/f/fc/%E5%B4%A9%E5%9D%8F3%E6%AC%A1%E5%85%83Q.png'
 bt.setAttribute('class','copybuttonein');
 bt.setAttribute('onclick','getlog()');
-bt.style = 'float:right;padding:10px 10px;z-index:999;position:absoluted;top:0px;left:-80px;display:block;';
+bt.style = 'float:right;padding:10px;z-index:999;position:absoluted;top:0px;left:-80px;display:block;';
 bt.appendChild(ts);
 var iaa=document.getElementsByClassName('history')[0]
 iaa.insertBefore(bt,iaa.firstChild);
-iaa.appendChild(x);
 
 btt.setAttribute('onclick','getref()');
-btt.style = 'float:right;padding:10px 10px;z-index:999;position:absoluted;top:0px;left:-80px;display:block;';
+btt.style = 'float:right;padding:10px;z-index:999;position:absoluted;top:0px;left:-80px;display:block;';
 btt.appendChild(ts);
 var ibb=document.getElementsByClassName('remark')[0]
 ibb.insertBefore(btt,ibb.firstChild);
+var x = document.createElement("INPUT");
+x.setAttribute("type", "text");
+x.id = 'oba';
+var y = document.createElement("INPUT");
+y.setAttribute("type", "text");
+y.id = 'obb';
+iaa.appendChild(x);
 ibb.appendChild(y);
