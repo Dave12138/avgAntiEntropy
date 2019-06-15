@@ -36,10 +36,10 @@ function getref(){
 }
 var x = document.createElement("INPUT");
 x.setAttribute("type", "text");
-x.id = oba;
+x.id = 'oba';
 var y = document.createElement("INPUT");
 y.setAttribute("type", "text");
-y.id = obb;
+y.id = 'obb';
 var ts = document.createElement('img')
 var bt = document.createElement('button')
 var btt = document.createElement('button')
