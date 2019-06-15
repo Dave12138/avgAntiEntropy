@@ -12,7 +12,7 @@ function getlog(){
     for (child = 0; child < children.length; child++) {
         getext = getext + '\n' + children[child].innerHTML;
     }
-    //prompt('读取',getext)
+    prompt('读取',getext)
     x.value = getext
     return getext
 }
@@ -30,7 +30,7 @@ function getref(){
     for (child = 0; child < children.length; child++) {
         getext = getext + '\n' + children[child].innerHTML;
     }
-    //prompt('读取',getext)
+    prompt('读取',getext)
     y.value = getext
     return getext
 }
