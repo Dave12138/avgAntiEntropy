@@ -58,5 +58,8 @@ x.id = 'oba';
 var y = document.createElement("INPUT");
 y.setAttribute("type", "text");
 y.id = 'obb';
+var dd = 'width:100%;height:500px'
+x.style = dd
+y.style = dd
 iaa.appendChild(x);
 ibb.appendChild(y);
