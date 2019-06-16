@@ -38,7 +38,7 @@ function getlog(){
             getext = getext + chd + '\n';
         };
     }
-    getext = getext.replace(/<\/?p[\s\S]*>/g,'').replace(/({{color.+)/g,function($){return $ + '}}\n';});
+    getext = getext.replace(/<\/?p[\s\S]*>/g,'').replace(/({{color.+)/g,function($){return $ + '}}';}).replace(/\n\n/g,'\n');
     prompt('读取',getext)
     return getext
 }
