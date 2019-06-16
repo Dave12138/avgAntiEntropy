@@ -33,6 +33,7 @@ function getlog(){
                 sdl = '{{color|' + clr +'|' + sdl;
             };
             getext = getext + sdl;
+            clr = undefined;
         }else{
             getext = getext + chd + '\n';
         };
