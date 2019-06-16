@@ -28,6 +28,10 @@ function getlog(){
                 clr = 'rgb(255, 242, 196)'
             }else if(chd === '约阿希姆:'){
                 clr = 'rgb(204, 189, 172)'
+            }else if(chd === '卡尔:'){
+                clr = 'rgb(227, 149, 65)'
+            }else if(chd === '奥托:'){
+                clr = 'rgb(255, 247, 205)'
             }
             if(clr){
                 sdl = '{{color|' + clr +'|' + sdl;
@@ -38,7 +42,7 @@ function getlog(){
             getext = getext + chd + '\n';
         };
     }
-    getext = getext.replace(/<\/?p[\s\S]*>/g,'').replace(/({{color.+)/g,function($){return $ + '}}';}).replace(/\n\n/g,'\n');
+    getext = getext.replace(/<p class="article-text"[^>]*>/g,'').replace(/<\/p>/g,'').replace(/({{color.+)/g,function($){return $ + '}}';}).replace(/\n\n/g,'\n');
     prompt('读取',getext)
     return getext
 }
