@@ -27,7 +27,7 @@ function getlog(){
         };
     }
     getext = getext.replace(/<p class="article-text"[^>]*>/g,'').replace(/<\/p>/g,'').replace(/({{color.+)/g,function($){return $ + '}}';}).replace(/\n\n/g,'\n');
-    inpbox.value = getext
+    inpbox.value = getext.replace(/\n/g, "<br/>")
     inpbox.select()
     document.execCommand("Copy");
     return getext
@@ -79,7 +79,7 @@ function getref(){
         getext = getext + '\n' + children[child].innerHTML;
     }
     getext = getext.replace(/undefined/g,'')
-    inpbox.value = getext
+    inpbox.value = getext.replace(/\n/g, "<br/>")
     inpbox.select()
     document.execCommand("Copy");
     return getext
