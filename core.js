@@ -1,3 +1,4 @@
+
 function getlog(){
     var TextBox = document.getElementById('historyTextBox');
     var getext = ''
@@ -14,25 +15,7 @@ function getlog(){
         chd = children[child].innerHTML;
         if(chd[chd["length"]-1] === ':'){
             sdl =  '<small>' + chd + '</small>';
-            if (chd === '薛定谔:'){
-                clr = 'rgb(161, 135, 121)'
-            }else if(chd === '普朗克:'){
-                clr = 'rgb(208, 223, 162)'
-            }else if(chd === '爱因斯坦:'){
-                clr = '#6495ED'
-            }else if(chd === '特斯拉:'){
-                clr = '#E32636'
-            }else if(chd === '芬兰人:' || chd === '图书管理员:'){
-                clr = '#CD853F'
-            }else if(chd === '蕾安娜:'){
-                clr = 'rgb(255, 242, 196)'
-            }else if(chd === '约阿希姆:'){
-                clr = 'rgb(204, 189, 172)'
-            }else if(chd === '卡尔:'){
-                clr = 'rgb(227, 149, 65)'
-            }else if(chd === '奥托:'){
-                clr = 'rgb(255, 247, 205)'
-            }
+            clr = swch(chd)
             if(clr){
                 sdl = '{{color|' + clr +'|' + sdl;
             };
@@ -43,8 +26,37 @@ function getlog(){
         };
     }
     getext = getext.replace(/<p class="article-text"[^>]*>/g,'').replace(/<\/p>/g,'').replace(/({{color.+)/g,function($){return $ + '}}';}).replace(/\n\n/g,'\n');
-    prompt('读取',getext)
+
     return getext
+}
+function swch(_$_){
+    switch(_$_){
+        case '薛定谔:':
+            return 'rgb(161, 135, 121)';
+        case '普朗克:':
+            return '#6495ED';
+        case '爱因斯坦:':
+            return '#6495ED';
+        case '特斯拉:':
+            return '#E32636';
+        case '芬兰人:':
+            return '#CD853F';
+        case '图书管理员:':
+            return '#CD853F';
+        case '蕾安娜:':
+            return 'rgb(255, 242, 196)';
+        case '约阿希姆:':
+            return 'rgb(204, 189, 172)';
+        case '卡尔:':
+            return 'rgb(227, 149, 65)';
+        case '奥托:':
+            return 'rgb(255, 247, 205)';
+        case '???:':
+            return '问号色，待填补';
+        
+        default :
+            return undefined;
+    }
 }
 function getref(){
     var TextBox = document.getElementById('remarkTextBox');
@@ -61,13 +73,16 @@ function getref(){
         getext = getext + '\n' + children[child].innerHTML;
     }
     getext = getext.replace(/undefined/g,'')
-    prompt('读取',getext)
     return getext
+}
+function reburn(){
+    document.write(old_doc)
 }
 var stle = 'float:right;padding:10px;z-index:999;display:block;position:absoluted;top:0px;left:-80px;';
 var ts = document.createElement('img')
 var bt = document.createElement('button')
 var btt = document.createElement('button')
+
 ts.src = 'https://img.moegirl.org/common/f/fc/%E5%B4%A9%E5%9D%8F3%E6%AC%A1%E5%85%83Q.png'
 var tx = document.createElement('img')
 tx.src = 'https://img.moegirl.org/common/f/fc/%E5%B4%A9%E5%9D%8F3%E6%AC%A1%E5%85%83Q.png'
