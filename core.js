@@ -78,7 +78,7 @@ function getref(){
 function reburn(){
     document.write(old_doc)
 }
-var stle = 'float:right;padding:10px;z-index:999;display:block;position:absoluted;top:0px;left:-80px;';
+var stle = 'float:left;padding:10px;z-index:999;display:block;position:absoluted;top:0px;left:-80px;';
 var ts = document.createElement('img')
 var bt = document.createElement('button')
 var btt = document.createElement('button')
