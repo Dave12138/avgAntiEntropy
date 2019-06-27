@@ -51,6 +51,8 @@ function swch(_$_){
             return 'rgb(227, 149, 65)';
         case '奥托:':
             return 'rgb(255, 247, 205)';
+        case '丽塔:':
+            return 'rgb(221, 149, 235)';
         case '???:':
             return '问号色，待填补';
         
