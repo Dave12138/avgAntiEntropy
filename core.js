@@ -4,6 +4,7 @@ function getlog(){
     var getext = ''
     var children = [], child = TextBox.firstChild;
     var chd , sdl ,clr
+    var inpbox = document.getElementById('i1')
     if (!child){
         return undefined
     }
@@ -26,7 +27,9 @@ function getlog(){
         };
     }
     getext = getext.replace(/<p class="article-text"[^>]*>/g,'').replace(/<\/p>/g,'').replace(/({{color.+)/g,function($){return $ + '}}';}).replace(/\n\n/g,'\n');
-
+    inpbox.value = getext
+    inpbox.select()
+    document.execCommand("Copy");
     return getext
 }
 function swch(_$_){
@@ -53,7 +56,7 @@ function swch(_$_){
             return 'rgb(255, 247, 205)';
         case '丽塔:':
             return 'rgb(221, 149, 235)';
-        case '???:':
+        case '？？？:':
             return '问号色，待填补';
         
         default :
@@ -64,6 +67,7 @@ function getref(){
     var TextBox = document.getElementById('remarkTextBox');
     var getext = ''
     var children = [], child = TextBox.firstChild;
+    var inpbox = document.getElementById('i2')
     if (!child){
         return undefined
     }
@@ -75,6 +79,9 @@ function getref(){
         getext = getext + '\n' + children[child].innerHTML;
     }
     getext = getext.replace(/undefined/g,'')
+    inpbox.value = getext
+    inpbox.select()
+    document.execCommand("Copy");
     return getext
 }
 function reburn(){
@@ -84,6 +91,14 @@ var stle = 'float:left;padding:10px;z-index:999;display:block;position:absoluted
 var ts = document.createElement('img')
 var bt = document.createElement('button')
 var btt = document.createElement('button')
+var inpbox = document.createElement('input')
+var inpboxs = document.createElement('input')
+
+inpbox.id = 'i1'
+inpboxs.id = 'i2'
+
+inpbox.setAttribute("type", "text");
+inpboxs.setAttribute("type", "text");
 
 ts.src = 'https://img.moegirl.org/common/f/fc/%E5%B4%A9%E5%9D%8F3%E6%AC%A1%E5%85%83Q.png'
 var tx = document.createElement('img')
@@ -93,6 +108,9 @@ bt.style = stle;
 bt.appendChild(tx);
 var iaa=document.getElementsByClassName('history')[0]
 iaa.insertBefore(bt,iaa.firstChild);
+
+document.getElementById('remarkTextBox').appendChild(inpboxs)
+document.getElementById('historyTextBox').appendChild(inpbox)
 
 btt.setAttribute('onclick','getref()');
 btt.style = stle;
