@@ -30,6 +30,7 @@ function getlog(){
     inpbox.value = getext.replace(/\n/g, "<br/>")
     inpbox.select()
     document.execCommand("Copy");
+    prompt('.......',getext)
     return getext
 }
 function swch(_$_){
@@ -82,11 +83,10 @@ function getref(){
     inpbox.value = getext.replace(/\n/g, "<br/>")
     inpbox.select()
     document.execCommand("Copy");
+    prompt('.......',getext)
     return getext
 }
-function reburn(){
-    document.write(old_doc)
-}
+
 var stle = 'float:left;padding:10px;z-index:999;display:block;position:absoluted;top:0px;left:-80px;';
 var ts = document.createElement('img')
 var bt = document.createElement('button')
