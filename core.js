@@ -109,8 +109,8 @@ bt.appendChild(tx);
 var iaa=document.getElementsByClassName('history')[0]
 iaa.insertBefore(bt,iaa.firstChild);
 
-document.getElementById('remarkTextBox').appendChild(inpboxs)
-document.getElementById('historyTextBox').appendChild(inpbox)
+document.getElementById('remarkTextBox').parentNode.appendChild(inpboxs)
+document.getElementById('historyTextBox').parentNode.appendChild(inpbox)
 
 btt.setAttribute('onclick','getref()');
 btt.style = stle;
